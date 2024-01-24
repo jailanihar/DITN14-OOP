@@ -6,4 +6,9 @@ public class Pirate {
 	public String name;
 	int health;
 	
+	public Pirate(String pName, int pHealth) {
+		name = pName;
+		health = pHealth;
+	}
+	
 }
