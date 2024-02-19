@@ -1,10 +1,11 @@
-package week03.slot02.assets.weapons;
+package week04.slot02.assets.weapons;
 
-import week03.slot02.assets.Pirate;
+import week04.slot02.assets.Pirate;
+import week04.slot02.assets.interfaces.Placeable;
 
-public class Weapon {
+public abstract class Weapon implements Placeable {
 	
-	private int damage;
+	protected int damage;
 	
 	public Weapon(int damage) {
 		setDamage(damage);
@@ -26,12 +27,6 @@ public class Weapon {
 		this.damage = damage;
 	}
 	
-	public int doDamage(Pirate pirate) {
-		if(pirate != null) {
-			int newDamage = damage - pirate.getDefence();
-			return newDamage;
-		}
-		return -1;
-	}
+	public abstract int doDamage(Pirate pirate);
 
 }

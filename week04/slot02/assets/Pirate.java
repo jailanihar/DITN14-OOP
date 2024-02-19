@@ -1,8 +1,9 @@
-package week03.slot02.assets;
+package week04.slot02.assets;
 
-import week03.slot02.assets.weapons.Weapon;
+import week04.slot02.assets.interfaces.Placeable;
+import week04.slot02.assets.weapons.Weapon;
 
-public class Pirate {
+public class Pirate implements Placeable {
 
 	private final static String DEFAULT_NAME_PREFIX = "Pirate";
 	private final static int DEFAULT_HEALTH = 5;

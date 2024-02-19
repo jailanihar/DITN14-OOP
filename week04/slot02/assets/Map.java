@@ -1,4 +1,6 @@
-package week03.slot02.assets;
+package week04.slot02.assets;
+
+import week04.slot02.assets.interfaces.Placeable;
 
 public class Map {
 
@@ -7,7 +9,7 @@ public class Map {
 	public final static String DIRECTION_LEFT = "left";
 	public final static String DIRECTION_RIGHT = "right";
 	// Pirate[width or x][height or y] 
-	private Pirate[][] arena;
+	private Placeable[][] arena;
 	
 	public Map(int width, int height) {
 		if(width < 1) {
@@ -16,7 +18,7 @@ public class Map {
 		if(height < 1) {
 			height = 5;
 		}
-		arena = new Pirate[width][height];
+		arena = new Placeable[width][height];
 	}
 	
 	public int getHeight() {
@@ -27,9 +29,22 @@ public class Map {
 		return arena.length;
 	}
 	
-	public Pirate selectPirate(int x, int y) {
+	public Placeable selectAssets(int x, int y) {
 		if(checkCoordinate(x, y)) {
 			return arena[x][y];
+		}
+		return null;
+	}
+	
+	public void addAssets(int x, int y, Placeable assets) {
+		if(checkCoordinate(x, y)) {
+			arena[x][y] = assets;
+		}
+	}
+	
+	public Pirate selectPirate(int x, int y) {
+		if(checkCoordinate(x, y) && arena[x][y] instanceof Pirate) {
+			return (Pirate) arena[x][y];
 		}
 		return null;
 	}

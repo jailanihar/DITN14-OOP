@@ -1,8 +1,11 @@
-package week03.slot02.app;
+package week04.slot01.app;
 
-import week03.slot02.assets.Map;
-import week03.slot02.assets.Pirate;
-import week03.slot02.assets.weapons.Weapon;
+import week04.slot01.assets.Map;
+import week04.slot01.assets.Pirate;
+import week04.slot01.assets.weapons.Axe;
+import week04.slot01.assets.weapons.Gun;
+import week04.slot01.assets.weapons.Sword;
+import week04.slot01.assets.weapons.Weapon;
 
 public class TestApp {
 
@@ -11,15 +14,20 @@ public class TestApp {
 		
 		map.addPirate(0, 0, new Pirate());
 		map.addPirate(1, 0, new Pirate("Abu", 3, 1));
-		map.addPirate(0, 2, new Pirate("Bakar", 2));
+		map.addPirate(1, 1, new Pirate("Bakar", 5, 2));
 		printArena(map);
 		
-		Weapon weapon = new Weapon(3);
-		map.selectPirate(0, 0).equipWeapon(weapon);
+		Gun gun = new Gun(2, 1);
+		map.selectPirate(0, 0).equipWeapon(gun);
+		Sword sword = new Sword(4);
+		map.selectPirate(1, 0).equipWeapon(sword);
+		Axe axe = new Axe(3);
+		map.selectPirate(1, 1).equipWeapon(axe);
 		printArena(map);
 		
 		map.movePirateRight(0, 0);
 		printArena(map);
+		
 		map.movePirateRight(0, 0);
 		printArena(map);
 	}

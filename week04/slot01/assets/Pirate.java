@@ -1,6 +1,6 @@
-package week03.slot02.assets;
+package week04.slot01.assets;
 
-import week03.slot02.assets.weapons.Weapon;
+import week04.slot01.assets.weapons.Weapon;
 
 public class Pirate {
 

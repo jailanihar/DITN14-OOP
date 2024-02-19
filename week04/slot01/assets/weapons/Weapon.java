@@ -1,10 +1,10 @@
-package week03.slot02.assets.weapons;
+package week04.slot01.assets.weapons;
 
-import week03.slot02.assets.Pirate;
+import week04.slot01.assets.Pirate;
 
 public class Weapon {
 	
-	private int damage;
+	protected int damage;
 	
 	public Weapon(int damage) {
 		setDamage(damage);

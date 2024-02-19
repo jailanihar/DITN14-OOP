@@ -1,4 +1,4 @@
-package week03.slot02.assets;
+package week04.slot01.assets;
 
 public class Map {
 
